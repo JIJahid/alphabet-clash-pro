@@ -29,7 +29,7 @@
                 <p class="px-4 pb-2 bg-[#2F2941] text-white rounded-b-xl">Don't watch keyboard  while playing...</p>
             </div>
             <div class="flex justify-center items-center h-full">
-                <h1 id="curren-alphabet" class="text-8xl font-bold uppercase">Y</h1>
+                <h1 id="current-alphabet" class="text-8xl font-bold uppercase">Y</h1>
             </div>
         </div>
     <!--keyboard start-->
@@ -74,12 +74,12 @@
         <button class="btn  bg-purple-500 text-white text-2xl">
             Life
             <img src="./images/Group 23.svg" alt="">
-            <span>1</span>
+            <span id="current-life">5</span>
           </button>
         <button class="btn  bg-purple-500 text-white text-2xl">
             Score
             <img src="./images/monetization_on.svg" alt="">
-            <span>1</span>
+            <span id="current-score">0</span>
           </button>
         </div>
        </div>
@@ -87,13 +87,14 @@
 
 
     <!-- final score Board-->
-    <section class="score flex justify-center min-h-screen items-center hidden">
+    <section id="final-score" class=" flex justify-center min-h-screen items-center hidden">
         <div class="space-y-5 text-center bg-[#FFFFFF33] p-5 rounded-2xl">
+            <h2 class="text-2xl text-white font-bold">Game Over !</h2>
             <h1 class="text-6xl text-white font-bold">
                 <span>Score:</span>
-                <span>14</span>
+                <span id="last-score">14</span>
             </h1>
-            <button class="btn text-lg">Play Agian</button>
+            <button onclick="play()" class="btn text-lg">Play Agian</button>
             <p class="text-white text-lg ">Practice will make you Pro</p>
         </div>
     </section>
