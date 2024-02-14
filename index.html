@@ -1,11 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--daisy Ui-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--custom CSS-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
+ <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
+
+    <section id="home-screen" class="home min-h-screen text-white flex justify-center items-center ">
+        <div class="flex flex-col items-center gap-5 ">
+            <h1 class="text-8xl uppercase font-extrabold">Alpha Clash Pro </h1>
+            <p class="text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button  onclick="play()" class="btn bg-white text-black text-lg">Play Now</button>
+        </div>
+    </section>
+
+    <section id="play-ground" class="play-ground hidden">
+       <div class="flex flex-col justify-center items-center gap-8 pt-10">
+         <!--screen-->
+         <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313cc] bg-[#FFFFFFB3]">
+            <div class="flex justify-center">
+                <p class="px-4 pb-2 bg-[#2F2941] text-white rounded-b-xl">Don't watch keyboard  while playing...</p>
+            </div>
+            <div class="flex justify-center items-center h-full">
+                <h1 id="curren-alphabet" class="text-8xl font-bold uppercase">Y</h1>
+            </div>
+        </div>
+    <!--keyboard start-->
+    <div>
+        <div class="flex justify-center gap-1 my-1 w-full">
+        <kbd id="q" class="kbd">q</kbd>
+        <kbd id="w" class="kbd">w</kbd>
+        <kbd id="e" class="kbd">e</kbd>
+        <kbd id="r" class="kbd">r</kbd>
+        <kbd id="t" class="kbd">t</kbd>
+        <kbd id="y" class="kbd">y</kbd>
+        <kbd id="u" class="kbd">u</kbd>
+        <kbd id="i" class="kbd">i</kbd>
+        <kbd id="o" class="kbd">o</kbd>
+        <kbd id="p" class="kbd">p</kbd>
+</div> 
+<div class="flex justify-center gap-1 my-1 w-full">
+        <kbd id="a" class="kbd">a</kbd>
+        <kbd id="s" class="kbd">s</kbd>
+        <kbd id="d" class="kbd">d</kbd>
+        <kbd id="f" class="kbd">f</kbd>
+        <kbd id="g" class="kbd">g</kbd>
+        <kbd id="h" class="kbd">h</kbd>
+        <kbd id="j" class="kbd">j</kbd>
+        <kbd id="k" class="kbd">k</kbd>
+        <kbd id="l" class="kbd">l</kbd>
+</div> 
+<div class="flex justify-center gap-1 my-1 w-full">
+        <kbd id="z" class="kbd">z</kbd>
+        <kbd id="x" class="kbd">x</kbd>
+        <kbd id="c" class="kbd">c</kbd>
+        <kbd id="v" class="kbd">v</kbd>
+        <kbd id="b" class="kbd">b</kbd>
+        <kbd id="n" class="kbd">n</kbd>
+        <kbd id="m" class="kbd">m</kbd>
+        <kbd id="/" class="kbd">/</kbd>
+</div>
+    </div>
+        <!--keyboard end-->
+        <!--life score-->
+        <div class="flex l justify-between w-3/4">
+        <button class="btn  bg-purple-500 text-white text-2xl">
+            Life
+            <img src="./images/Group 23.svg" alt="">
+            <span>1</span>
+          </button>
+        <button class="btn  bg-purple-500 text-white text-2xl">
+            Score
+            <img src="./images/monetization_on.svg" alt="">
+            <span>1</span>
+          </button>
+        </div>
+       </div>
+    </section>
+
+
+    <!-- final score Board-->
+    <section class="score flex justify-center min-h-screen items-center hidden">
+        <div class="space-y-5 text-center bg-[#FFFFFF33] p-5 rounded-2xl">
+            <h1 class="text-6xl text-white font-bold">
+                <span>Score:</span>
+                <span>14</span>
+            </h1>
+            <button class="btn text-lg">Play Agian</button>
+            <p class="text-white text-lg ">Practice will make you Pro</p>
+        </div>
+    </section>
+ </main>
+
+
+
+    <script src="./scripts/utility.js"></script>
+    <script src="./scripts/alpha-clash.js"></script>
 </body>
 </html>
